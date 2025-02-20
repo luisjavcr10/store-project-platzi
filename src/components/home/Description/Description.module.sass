@@ -6,10 +6,20 @@
   margin: 6rem auto
   padding: 2rem 2.5rem
   border-radius: 1.375rem
-  & > img
-    object-fit: cover
-    border-radius: 1rem
-    box-shadow: 0 0 4rem rgba(255, 255, 255, 0.2)
+
+  &__imageContainer
+    position: relative
+    @media screen and (min-width: 600px) 
+        width: 350px
+        height: 250px
+    @media screen and (min-width: 1000px)
+        width: 450px
+        height: 350px
+    & > img
+      object-fit: cover
+      border-radius: 1rem
+      box-shadow: 0 0 4rem rgba(255, 255, 255, 0.2)
+
   &__text
     & > h2
       font-size: 2rem

@@ -1,9 +1,12 @@
-import {Header} from '../components/shared/Header';
+import { Header } from '../components/shared/Header';
 import { Footer } from '../components/shared/Footer'
-import { Inter } from 'next/font/google';
+import { Sigmar } from 'next/font/google';
 import './../sass/globass.sass';
 
-const inter = Inter({ subsets: ['latin'] })
+const sigmar = Sigmar({
+  weight: ['400'],
+  subsets: ['latin'],
+})
 
 export default function RootLayout({
   children,
@@ -12,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={sigmar.className}>
         <Header />
         {children}
         <Footer />
