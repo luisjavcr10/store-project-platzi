@@ -12,6 +12,9 @@ export const Header = () => {
               <li>
                 <Link className={styles.Link} href="/store">Store</Link>
               </li>
+              <li>
+                <Link className={styles.Link} href="/test">Test</Link>
+              </li>
             </ul>
           </nav>
         </header>
