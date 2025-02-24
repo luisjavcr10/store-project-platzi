@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export default function RootLayout({ children}: Readonly<{ children: React.ReactNode;}>) {
+  throw new Error("Error");
   return (
     <main>
         <nav>

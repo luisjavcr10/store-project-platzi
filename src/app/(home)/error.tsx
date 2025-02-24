@@ -2,12 +2,8 @@
 
 import styles from './error.module.sass';
 
-interface ErrorProps {
-    error: Error;
-    reset: () => void;
-}
 
-export default function Error({ reset }: ErrorProps){
+export default function Error({ reset }: ErrorPageProps){
     return(
         <div className={styles.error}>
             <h1>Error</h1>
