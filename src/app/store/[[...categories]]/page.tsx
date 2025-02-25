@@ -1,3 +1,5 @@
+import { ProductsWrapper } from "@/components/Store/ProductWrapped"
+
 interface Props{
     params: Promise<{
         categories: string[] 
@@ -7,11 +9,15 @@ interface Props{
     }>
 }
 
-export default async function Categories(props: Props) {
+export default async function Category(props: Props) {
     const {categories} = (await props.params);
-    console.log((await props.params).categories + " " + (await props.searchParams).id);
+
+    const response = await fetch('http://localhost:3000/api');
+    const products = (await response.json()).data.products;
+    console.log(products);
+
 
     return(
-        <h1 className="text-center text-5xl p-4">Categories: {categories}</h1>
+        <ProductsWrapper products={products}/>
     );
 }
