@@ -10,7 +10,7 @@ export const MainProducts = async () =>{
             <h3>New products released</h3>
             <div className={styles.MainProducts__grid}>
                 {products.map((product: any) => {
-                    const imgSrc= product.images.edges[0].node.originalSrc;
+                    const imgSrc= product.image;
                     return(
                         <article key={product.id}>
                             <p>{product.title}</p>
